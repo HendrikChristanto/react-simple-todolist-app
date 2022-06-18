@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  boder: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-bg: #1b2430;
+  --color-bg-variant: #51557e;
+  --color-primary: #816797;
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --container-width-lg: 60%;
+  --container-width-md: 80%;
+  --container-width-sm: 90%;
+
+  --transition: all 400ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-family: "Roboto", sans-serif;
+}
+
+/* ===== GENERAL STYLES ===== */
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+.btn {
+  display: inline-block;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-bg-variant);
+  color: white;
+  border: 1px solid var(--color-bg-variant);
+  border-radius: 0.4rem;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-bg-variant);
+  border: 1px solid var(--color-bg-variant);
+}
+
+.btn:hover {
+  background-color: var(--color-white);
+  border-color: transparent;
+  color: var(--color-bg);
+  cursor: pointer;
+}
+
+@keyframes animatePopup {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===== MEDIA QUERIES (MEDIUM) ===== */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+}
+
+/* ===== MEDIA QUERIES (SMALL) ===== */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+}
